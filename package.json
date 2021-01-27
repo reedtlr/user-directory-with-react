@@ -1,0 +1,19 @@
+{
+  "name": "user-directory-with-react",
+  "version": "1.0.0",
+  "description": "A randomly generated user directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reedtlr/user-directory-with-react.git"
+  },
+  "author": "Reed Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reedtlr/user-directory-with-react/issues"
+  },
+  "homepage": "https://github.com/reedtlr/user-directory-with-react#readme"
+}

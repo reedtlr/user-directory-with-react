@@ -1,6 +1,8 @@
 # user-directory-with-react
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+(https://reedtlr.github.io/user-directory-with-react/)
+
 A randomly generated user directory written in React
 ## Table of contents
 * [General info](#general-info)
@@ -26,3 +28,5 @@ To install locally, download the repository. Make sure you have node.js installe
 To start the application
 
 ``` npm run start``` 
+
+![Image1 PNG](./public/images/image.png)

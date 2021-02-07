@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -11,12 +12,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchField() {
+export default function SearchField(props) {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="outlined-basic" label="Search" variant="outlined" />
+      <TextField onChange={props.handleInputChange} value= {props.search} id="outlined-basic" 
+      label="Search" variant="outlined" />
     </form>
   );
 }

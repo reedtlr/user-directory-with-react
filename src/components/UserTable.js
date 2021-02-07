@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import SortIcon from '@material-ui/icons/Sort';
 
 const useStyles = makeStyles({
   table: {
@@ -24,15 +25,17 @@ export default function UserTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>User Directory</TableCell>
-            <TableCell align="right">First Name</TableCell>
-            <TableCell align="right">Last Name</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right" onClick={props.handleSort} >Phone</TableCell>
+            <TableCell align="right" onClick={props.handleSortFirst} >First Name <SortIcon /> </TableCell>
+            <TableCell align="right" onClick={props.handleSortLast} >Last Name <SortIcon /> </TableCell>
+            <TableCell align="right" onClick={props.handleSortEmail}>Email <SortIcon /> </TableCell>
+            <TableCell align="right" onClick={props.handleSortPhone}>Phone <SortIcon /> </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.tableOfUsers.map((row) => (
-            <TableRow key={row.name}>
+          {props.tableOfUsers.filter((user) => user.name.first.includes(props.search) || 
+          user.name.last.includes(props.search) || user.email.includes(props.search) || 
+          user.cell.includes(props.search)).map((row) => (
+            <TableRow key={row.email}>
               <TableCell component="th" scope="row">
                 <img src={row.picture.thumbnail} alt={row.name.last} />
               </TableCell>

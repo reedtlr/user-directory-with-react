@@ -1,5 +1,6 @@
 {
   "name": "user-directory-with-react",
+  "homepage": "https://reedtlr.github.io/user-directory-with-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
